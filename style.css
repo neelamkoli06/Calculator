@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 9%;
+}
+#main{
+    height: 500px;
+    width: 26%;
+    background-color: black;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+#_1,#_2,#_3,#_4,#_5,#_6,#_7,#_8,#_9,#_0,#_dot,#_equal,#_plus,#_ac,#del,#_mod,
+#_division,#_multiply,#_substraction{
+    height: 58px;
+    width: 18%;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333333;
+    font-size: 22px;
+    font-weight: bold;
+    float: left;
+    margin: 3%;
+    border: none;
+    padding: 8%;
+}
+#_1:hover, #_2:hover, #_3:hover, #_4:hover, #_5:hover, #_6:hover, #_7:hover, #_8:hover, #_9:hover, #_0:hover, #_dot:hover, #del:hover, #_mod:hover{
+    background-color: #A5A5A5;
+}
+#_0{
+    height: 50px;
+    width: 42%;
+    border-radius: 50px;
+}
+#_equal,#_plus,#_division,#_multiply,#_substraction{
+    background-color: #F49E3F;
+}
+#_equal:hover, #_plus:hover, #_multiply:hover,#_substraction:hover,#_division:hover{
+   color: #F49E3F;
+   background-color: white;
+}
+#_ac,#del,#_mod{
+    background-color:#A5A5A5;
+    color: black;
+}
+#_ac:hover, #del:hover, #_mod:hover{
+    background-color: aliceblue;
+}
+input{
+    height: 58px;
+    width: 98%;
+    margin-bottom: 4%;
+    font-size: 30px;
+    border: none;
+    padding: 8px;
+    font-weight: bold;
+}
+/* --------------------------------------------- */
+
+@media screen and (max-width:767px) {
+    #main{
+    height: 500px;
+    width: 100%;
+    margin-top: 16%;
+    }
+}

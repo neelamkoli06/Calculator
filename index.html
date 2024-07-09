@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div id="main">
+
+        <input type="text" id="display" readonly>
+
+        <div class="buttons">
+            <button id="_ac" data-value="AC">AC</button>
+            <button id="del" data-value="del"><i class="fa-solid fa-delete-left"></i></button>
+            <button id="_mod" data-value="%">%</button>
+            <button id="_division" data-value="/">÷</button>
+
+            <button id="_7" data-value="7">7</button>
+            <button id="_8" data-value="8">8</button>
+            <button id="_9" data-value="9">9</button>
+            <button id="_multiply" data-value="*">x</button>
+
+            <button id="_4"  data-value="4">4</button>
+            <button id="_5"  data-value="5">5</button>
+            <button id="_6" data-value="6">6</button>
+            <button id="_substraction"  data-value="-">-</button>
+
+            <button id="_1" data-value="1">1</button>
+            <button id="_2" data-value="2">2</button>
+            <button id="_3" data-value="3">3</button>
+            <button id="_plus" data-value="+">+</button>
+
+            <button id="_0" data-value="0">0</button>
+            <button id="_dot" data-value=".">.</button>
+            <button id="_equal" data-value="=">=</button>
+        </div>
+    </div>
+</body>
+    <script>
+
+        const display = document.getElementById("display");
+            const buttons = document.querySelectorAll(".buttons button");
+
+            buttons.forEach(button => {
+                button.addEventListener("click", () => {
+                    const value = button.dataset.value;
+
+                    if (value === "=") {
+                        try {
+                            display.value = eval(display.value);
+                        } catch (error) {
+                            display.value = "Error";
+                        }
+                    } else if (value === "AC") {
+                        display.value = "";
+                    } else if (value === "del") {
+                        del();
+                    }
+                    else {
+                        display.value += value;
+                    }
+                });
+            });
+            function del() {
+                    display.value = display.value.slice(0, -1);
+                }
+    </script>
+</html>
